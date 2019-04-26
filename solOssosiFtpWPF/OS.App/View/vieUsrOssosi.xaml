@@ -1,0 +1,86 @@
+﻿<Window x:Class="OS.App.View.vieUsrOssosi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OS.App.View"
+        mc:Ignorable="d"
+        Title="FTP Siglo / Ossosi" Height="350" Width="525"
+        Icon="/OS.App;component/Images/SigloFTP.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3F456F" Offset="1"/>
+            <GradientStop Color="#FFE4F2F6" Offset="0.662"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btnValidar" 
+                Grid.Row="0"
+                Content="Actualizar FTP" 
+                HorizontalAlignment="Left" 
+                Margin="10,10,0,0" 
+                VerticalAlignment="Top" 
+                Width="130" 
+                Command="{Binding CmdValidar}"
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" 
+                Foreground="#FFF6F7FC" BorderBrush="#FFB2DDE8" Background="#FF47586C"/>
+        <ListView x:Name="lvwFtp" 
+                  Grid.Row="1"
+                  HorizontalAlignment="Stretch" 
+                  VerticalAlignment="Stretch" 
+                  ItemsSource="{Binding LstFile}">
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="Archivo" Width="120" DisplayMemberBinding="{Binding Name}" />
+                    <GridViewColumn Header="Fecha" Width="60" DisplayMemberBinding="{Binding Date}" />
+                    <GridViewColumn Header="Hora" Width="60" DisplayMemberBinding="{Binding Hour}" />
+                    <GridViewColumn Header="Tamaño (bytes)" Width="150">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Size, StringFormat=F2}" HorizontalAlignment="Right"  TextDecorations="Underline" Foreground="Blue" Cursor="Hand" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+
+
+        <Button x:Name="btnSelecionar" 
+                Grid.Row="2"
+                Content="Seleccionar Archivo" 
+                HorizontalAlignment="Left" 
+                Margin="10,6,0,0" 
+                VerticalAlignment="Top" 
+                Width="130" 
+                Command="{Binding CmdSeleccionar}"
+                Foreground="#FFF6F7FC" BorderBrush="#FFB2DDE8" Background="#FF47586C"/>
+        <TextBox x:Name="txtFilePath" 
+                 Grid.Row="2"
+                 HorizontalAlignment="Left" 
+                 Height="23" 
+                 Margin="10,30,0,0" 
+                 TextWrapping="Wrap" 
+                 Text="{Binding PLocalFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                 VerticalAlignment="Top" 
+                 Width="498"/>
+        <Button x:Name="btnEnviar" 
+                Grid.Row="2"
+                Content="Enviar" 
+                HorizontalAlignment="Left" 
+                Margin="10,60,0,0" 
+                VerticalAlignment="Top" 
+                Width="75" 
+                Command="{Binding CmdEnviar}" 
+                CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}"
+                Foreground="#FFF6F7FC" BorderBrush="#FFB2DDE8" Background="#FF47586C"/>
+
+    </Grid>
+</Window>

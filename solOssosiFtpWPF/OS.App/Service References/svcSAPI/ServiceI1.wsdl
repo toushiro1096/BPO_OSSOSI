@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://169.47.196.220:9296/Services/ServiceI.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://169.47.196.220:9296/Services/ServiceI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://169.47.196.220:9296/Services/ServiceI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+      <xsd:import schemaLocation="http://169.47.196.220:9296/Services/ServiceI.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Iconfig_RefreshMemory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMemory" />
+  </wsdl:message>
+  <wsdl:message name="Iconfig_RefreshMemory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMemoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_Venta_Masiva_ORDR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Venta_Masiva_ORDR" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_Venta_Masiva_ORDR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Venta_Masiva_ORDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Nota_Credito_ORDR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Nota_Credito_ORDR" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Nota_Credito_ORDR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Nota_Credito_ORDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Guia_Remision_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Guia_Remision" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Guia_Remision_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Guia_RemisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Cobranzas_Masiva_ORDR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Cobranzas_Masiva_ORDR" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Cobranzas_Masiva_ORDR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Cobranzas_Masiva_ORDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOCRD_SP_INSERTAR_OCRD_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OCRD" />
+  </wsdl:message>
+  <wsdl:message name="SOCRD_SP_INSERTAR_OCRD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OCRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Orden_Compra_OPOR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Orden_Compra_OPOR" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Orden_Compra_OPOR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Orden_Compra_OPORResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_lasgetItemCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:lasgetItemCode" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_lasgetItemCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:lasgetItemCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOJDT_SP_INSERTAR_OJDT_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OJDT" />
+  </wsdl:message>
+  <wsdl:message name="SOJDT_SP_INSERTAR_OJDT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OJDTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Iconfig">
+    <wsdl:operation name="RefreshMemory">
+      <wsdl:input wsaw:Action="http://tempuri.org/Iconfig/RefreshMemory" message="tns:Iconfig_RefreshMemory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Iconfig/RefreshMemoryResponse" message="tns:Iconfig_RefreshMemory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SORDR">
+    <wsdl:operation name="FP_Solicitud_Venta_Masiva_ORDR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDR" message="tns:SORDR_FP_Solicitud_Venta_Masiva_ORDR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDRResponse" message="tns:SORDR_FP_Solicitud_Venta_Masiva_ORDR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Nota_Credito_ORDR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Nota_Credito_ORDR" message="tns:SORDR_FP_Nota_Credito_ORDR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Nota_Credito_ORDRResponse" message="tns:SORDR_FP_Nota_Credito_ORDR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Guia_Remision">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Guia_Remision" message="tns:SORDR_FP_Guia_Remision_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Guia_RemisionResponse" message="tns:SORDR_FP_Guia_Remision_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Cobranzas_Masiva_ORDR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Cobranzas_Masiva_ORDR" message="tns:SORDR_FP_Cobranzas_Masiva_ORDR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Cobranzas_Masiva_ORDRResponse" message="tns:SORDR_FP_Cobranzas_Masiva_ORDR_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOCRD">
+    <wsdl:operation name="SP_INSERTAR_OCRD">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOCRD/SP_INSERTAR_OCRD" message="tns:SOCRD_SP_INSERTAR_OCRD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOCRD/SP_INSERTAR_OCRDResponse" message="tns:SOCRD_SP_INSERTAR_OCRD_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOPOR">
+    <wsdl:operation name="FP_Orden_Compra_OPOR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_Orden_Compra_OPOR" message="tns:SOPOR_FP_Orden_Compra_OPOR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_Orden_Compra_OPORResponse" message="tns:SOPOR_FP_Orden_Compra_OPOR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="lasgetItemCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/lasgetItemCode" message="tns:SOPOR_lasgetItemCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/lasgetItemCodeResponse" message="tns:SOPOR_lasgetItemCode_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOJDT">
+    <wsdl:operation name="SP_INSERTAR_OJDT">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOJDT/SP_INSERTAR_OJDT" message="tns:SOJDT_SP_INSERTAR_OJDT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOJDT/SP_INSERTAR_OJDTResponse" message="tns:SOJDT_SP_INSERTAR_OJDT_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Iconfig" type="tns:Iconfig">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RefreshMemory">
+      <soap:operation soapAction="http://tempuri.org/Iconfig/RefreshMemory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SORDR" type="tns:SORDR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Solicitud_Venta_Masiva_ORDR">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Nota_Credito_ORDR">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Nota_Credito_ORDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Guia_Remision">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Guia_Remision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Cobranzas_Masiva_ORDR">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Cobranzas_Masiva_ORDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOCRD" type="tns:SOCRD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SP_INSERTAR_OCRD">
+      <soap:operation soapAction="http://tempuri.org/SOCRD/SP_INSERTAR_OCRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOPOR" type="tns:SOPOR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Orden_Compra_OPOR">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_Orden_Compra_OPOR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="lasgetItemCode">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/lasgetItemCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOJDT" type="tns:SOJDT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SP_INSERTAR_OJDT">
+      <soap:operation soapAction="http://tempuri.org/SOJDT/SP_INSERTAR_OJDT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceI">
+    <wsdl:port name="BasicHttpBinding_Iconfig" binding="tns:BasicHttpBinding_Iconfig">
+      <soap:address location="http://169.47.196.220:9296/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SORDR" binding="tns:BasicHttpBinding_SORDR">
+      <soap:address location="http://169.47.196.220:9296/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOCRD" binding="tns:BasicHttpBinding_SOCRD">
+      <soap:address location="http://169.47.196.220:9296/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOPOR" binding="tns:BasicHttpBinding_SOPOR">
+      <soap:address location="http://169.47.196.220:9296/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOJDT" binding="tns:BasicHttpBinding_SOJDT">
+      <soap:address location="http://169.47.196.220:9296/Services/ServiceI.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

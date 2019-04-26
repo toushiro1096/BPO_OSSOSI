@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://169.47.196.220:9296/Services/ServiceC.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+  <xs:element name="FP_BUSCAR_OCRD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjOCRD" nillable="true" type="q1:OCRD" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_BUSCAR_OCRDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_BUSCAR_OCRDResult" nillable="true" type="q2:OCRD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Listar_OCRD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjOCRD" nillable="true" type="q3:OCRD" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Listar_OCRDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Listar_OCRDResult" nillable="true" type="q4:ArrayOfOCRD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_OITM">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FechaIni" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FechaFin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_OITMResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_LISTAR_OITMResult" nillable="true" type="q5:ArrayOfOITM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_OITM_TOT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_OITM_TOTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_LISTAR_OITM_TOTResult" nillable="true" type="q6:ArrayOfOITM" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_ORTT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="date" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_LISTAR_ORTTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_LISTAR_ORTTResult" nillable="true" type="q7:ArrayOfORTT" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

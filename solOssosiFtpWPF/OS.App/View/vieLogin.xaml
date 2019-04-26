@@ -1,0 +1,101 @@
+﻿<Window x:Class="OS.App.View.vieLogin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OS.App.View"
+        mc:Ignorable="d"
+        Title="FTP Siglo - Ossosi" 
+        Height="315" Width="200" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize" 
+        ToolTip="Ingreso FTP Siglo - Ossosi" Icon="/OS.App;component/Images/SigloFTP.png" AllowsTransparency="True" WindowStyle="None" >
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="Window.Loaded">
+            <BeginStoryboard>
+                <Storyboard>
+                    <DoubleAnimation Storyboard.TargetProperty="(Window.Opacity)"
+                                 From="0.0" To="1.0" Duration="0:0:1.5"
+                                 AutoReverse="False"/>
+                </Storyboard>
+            </BeginStoryboard>
+        </EventTrigger>
+    </Window.Triggers>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFEAE794" Offset="1"/>
+            <GradientStop Color="White" Offset="0.562"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ContentControl Grid.Column="0" 
+                        Content="{StaticResource pthLogSig}" 
+                        VerticalAlignment="Stretch" 
+                        HorizontalAlignment="Stretch"
+                        Margin="10,5,0,5"/>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="70"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" 
+                       Name="txbUsr" Text="Usuario" 
+                       HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5" Foreground="#FFA68A1F"/>
+            <TextBox Grid.Row="0" Grid.Column="1" 
+                     Name="txtUsr"  
+                     HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3"
+                     Text="{Binding Usr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" 
+                       Name="txbPwd" Text="Contraseña"
+                       HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5" Foreground="#FFA68A1F"/>
+            <PasswordBox Grid.Row="1" Grid.Column="1" 
+                         Name="txtPwd"
+                         HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="3"
+                         PasswordChar="•"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Button Grid.Row="0" Grid.Column="0"
+                    Style="{StaticResource btn}"
+                    Template="{StaticResource btnLog}"
+                    Margin="30,10,10,10" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Command="{Binding CmdOk}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" ToolTip="Aceptar" Height="45" Width="60"/>
+
+            <Button Grid.Row="0" Grid.Column="1"
+                    Style="{StaticResource btn}"
+                    Template="{StaticResource btnCan}"
+                    Margin="8,12,37,8" 
+                    Background="Transparent"
+                    BorderBrush="Transparent"
+                    VerticalAlignment="Center" 
+                    HorizontalAlignment="Center" 
+                    Command="{Binding CmdCancel}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType={x:Type Window}, Mode=FindAncestor}}" ToolTip="Cancelar" Height="45" Width="55">
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
