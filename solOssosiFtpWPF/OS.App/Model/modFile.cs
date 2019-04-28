@@ -26,7 +26,6 @@ namespace OS.App.Model
                 var _ret = con.GetObject("FilesUpl", this);
                 return (_ret != null && (Id = (int)_ret) > 0) ;
             }
-                
         }
         public bool Process()
         {
