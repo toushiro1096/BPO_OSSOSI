@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SSC.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SSC.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OCRD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicTradNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCRD1" nillable="true" type="tns:ArrayOfCRD1" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="MailCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCountr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCounty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipDoc" type="xs:int" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_GS_EsExt" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OCRD" nillable="true" type="tns:OCRD" />
+  <xs:complexType name="ArrayOfCRD1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRD1" nillable="true" type="tns:CRD1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRD1" nillable="true" type="tns:ArrayOfCRD1" />
+  <xs:complexType name="CRD1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingFloorRoom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRD1" nillable="true" type="tns:CRD1" />
+  <xs:complexType name="ArrayOfCampoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampoUsuario" nillable="true" type="tns:CampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+  <xs:complexType name="CampoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:CampoUsuario.m_tipos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampoUsuario" nillable="true" type="tns:CampoUsuario" />
+  <xs:simpleType name="CampoUsuario.m_tipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="alfanumerico" />
+      <xs:enumeration value="numerico" />
+      <xs:enumeration value="fecha" />
+      <xs:enumeration value="unidades" />
+      <xs:enumeration value="general" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CampoUsuario.m_tipos" nillable="true" type="tns:CampoUsuario.m_tipos" />
+  <xs:complexType name="ArrayOfOCRD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OCRD" nillable="true" type="tns:OCRD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOCRD" nillable="true" type="tns:ArrayOfOCRD" />
+  <xs:complexType name="ArrayOfOITM">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OITM" nillable="true" type="tns:OITM" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOITM" nillable="true" type="tns:ArrayOfOITM" />
+  <xs:complexType name="OITM">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desc1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desc2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Desc3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BrandCode" type="xs:int" />
+      <xs:element minOccurs="0" name="BrandName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UDF1Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeptCode" type="xs:int" />
+      <xs:element minOccurs="0" name="DeptName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClassCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubClassCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SubClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Cost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="FcCost" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RetailPrice" type="xs:decimal" />
+      <xs:element minOccurs="0" name="UPC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ALU" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TypeCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OITM" nillable="true" type="tns:OITM" />
+  <xs:complexType name="ArrayOfORTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ORTT" nillable="true" type="tns:ORTT" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfORTT" nillable="true" type="tns:ArrayOfORTT" />
+  <xs:complexType name="ORTT">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="Rate" type="xs:decimal" />
+      <xs:element minOccurs="0" name="RateDate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORTT" nillable="true" type="tns:ORTT" />
+</xs:schema>

@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SSC.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SSC.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfORDR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ORDR" nillable="true" type="tns:ORDR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfORDR" nillable="true" type="tns:ArrayOfORDR" />
+  <xs:complexType name="ORDR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName_x0020_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate_x0020_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocTotal_x0020_" type="xs:double" />
+      <xs:element minOccurs="0" name="LstDetalle" nillable="true" type="tns:ArrayOfRDR1" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesPersonCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EfectivoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="EfectivoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="EntregadoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="EntregadoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="VueltoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="VueltoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="MonedaVuelto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TarjetaSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="TarjetaDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodAlmacen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstPagoTarjeta" nillable="true" type="tns:ArrayOfRCT3" />
+      <xs:element minOccurs="0" name="U_GS_EsExt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_GS_NAC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoMovimiento" type="tns:ORDR.TIPOMOV" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORDR" nillable="true" type="tns:ORDR" />
+  <xs:complexType name="ArrayOfRDR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RDR1" nillable="true" type="tns:RDR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRDR1" nillable="true" type="tns:ArrayOfRDR1" />
+  <xs:complexType name="RDR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscountPercent" type="xs:double" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="order" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RDR1" nillable="true" type="tns:RDR1" />
+  <xs:complexType name="ArrayOfCampoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CampoUsuario" nillable="true" type="tns:CampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+  <xs:complexType name="CampoUsuario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Valor" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="tipo" type="tns:CampoUsuario.m_tipos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CampoUsuario" nillable="true" type="tns:CampoUsuario" />
+  <xs:simpleType name="CampoUsuario.m_tipos">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="alfanumerico" />
+      <xs:enumeration value="numerico" />
+      <xs:enumeration value="fecha" />
+      <xs:enumeration value="unidades" />
+      <xs:enumeration value="general" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CampoUsuario.m_tipos" nillable="true" type="tns:CampoUsuario.m_tipos" />
+  <xs:complexType name="ArrayOfRCT3">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RCT3" nillable="true" type="tns:RCT3" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRCT3" nillable="true" type="tns:ArrayOfRCT3" />
+  <xs:complexType name="RCT3">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CreditCardNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardValidUntil" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="VoucherNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreditCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Amount" type="xs:double" />
+      <xs:element minOccurs="0" name="AmountFC" type="xs:double" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RCT3" nillable="true" type="tns:RCT3" />
+  <xs:simpleType name="ORDR.TIPOMOV">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VEN" />
+      <xs:enumeration value="DEG" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ORDR.TIPOMOV" nillable="true" type="tns:ORDR.TIPOMOV" />
+  <xs:complexType name="ArrayOfCError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CError" nillable="true" type="tns:CError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCError" nillable="true" type="tns:ArrayOfCError" />
+  <xs:complexType name="CError">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Result" type="xs:int" />
+      <xs:element minOccurs="0" name="Error" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocEntry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Result2" type="xs:int" />
+      <xs:element minOccurs="0" name="Error2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocEntry2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno2" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LstCodigoExterno" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CError" nillable="true" type="tns:CError" />
+  <xs:complexType name="ArrayOfORPC">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ORPC" nillable="true" type="tns:ORPC" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfORPC" nillable="true" type="tns:ArrayOfORPC" />
+  <xs:complexType name="ORPC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JournalMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaDetalle" nillable="true" type="tns:ArrayOfRPC1" />
+      <xs:element minOccurs="0" name="Series" type="tns:ORPC.ISeries" />
+      <xs:element minOccurs="0" name="SlpCode" type="xs:int" />
+      <xs:element minOccurs="0" name="DocEntry" type="xs:int" />
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAtCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoDocOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDocOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDocOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDateOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORPC" nillable="true" type="tns:ORPC" />
+  <xs:complexType name="ArrayOfRPC1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RPC1" nillable="true" type="tns:RPC1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRPC1" nillable="true" type="tns:ArrayOfRPC1" />
+  <xs:complexType name="RPC1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WtLiable" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountPercent" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+      <xs:element minOccurs="0" name="BaseEntry" type="xs:int" />
+      <xs:element minOccurs="0" name="WhsCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RPC1" nillable="true" type="tns:RPC1" />
+  <xs:simpleType name="ORPC.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1100" />
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1300" />
+      <xs:enumeration value="S1500" />
+      <xs:enumeration value="S1600" />
+      <xs:enumeration value="S1700" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ORPC.ISeries" nillable="true" type="tns:ORPC.ISeries" />
+  <xs:complexType name="ArrayOfOPRQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OPRQ" nillable="true" type="tns:OPRQ" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOPRQ" nillable="true" type="tns:ArrayOfOPRQ" />
+  <xs:complexType name="OPRQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocEntry" type="xs:int" />
+      <xs:element minOccurs="0" name="DocNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JournalMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="LstPRQ1" nillable="true" type="tns:ArrayOfPRQ1" />
+      <xs:element minOccurs="0" name="NumAtCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RequriedDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Series" type="tns:OPRQ.ISeries" />
+      <xs:element minOccurs="0" name="SlpCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_NUCE" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_SDOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_TDOC" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OPRQ" nillable="true" type="tns:OPRQ" />
+  <xs:complexType name="ArrayOfPRQ1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PRQ1" nillable="true" type="tns:PRQ1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPRQ1" nillable="true" type="tns:ArrayOfPRQ1" />
+  <xs:complexType name="PRQ1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CostingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineNum" type="xs:int" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="RequiredDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PRQ1" nillable="true" type="tns:PRQ1" />
+  <xs:simpleType name="OPRQ.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1100" />
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1300" />
+      <xs:enumeration value="S1500" />
+      <xs:enumeration value="S1600" />
+      <xs:enumeration value="S1700" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OPRQ.ISeries" nillable="true" type="tns:OPRQ.ISeries" />
+  <xs:complexType name="ArrayOfOPCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OPCH" nillable="true" type="tns:OPCH" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOPCH" nillable="true" type="tns:ArrayOfOPCH" />
+  <xs:complexType name="OPCH">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocEntry" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Jrnlmemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="LstPCH1" nillable="true" type="tns:ArrayOfPCH1" />
+      <xs:element minOccurs="0" name="Series" type="tns:OPCH.ISeries" />
+      <xs:element minOccurs="0" name="SlpCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_CDOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_SDOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_TDOC" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_LGS_TIPO" type="tns:OPCH.TIPOMOV" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OPCH" nillable="true" type="tns:OPCH" />
+  <xs:complexType name="ArrayOfPCH1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PCH1" nillable="true" type="tns:PCH1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPCH1" nillable="true" type="tns:ArrayOfPCH1" />
+  <xs:complexType name="PCH1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocEntry" type="xs:int" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PCH1" nillable="true" type="tns:PCH1" />
+  <xs:simpleType name="OPCH.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1100" />
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1300" />
+      <xs:enumeration value="S1500" />
+      <xs:enumeration value="S1600" />
+      <xs:enumeration value="S1700" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OPCH.ISeries" nillable="true" type="tns:OPCH.ISeries" />
+  <xs:simpleType name="OPCH.TIPOMOV">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="VEN" />
+      <xs:enumeration value="CCH" />
+      <xs:enumeration value="DEG" />
+      <xs:enumeration value="COM" />
+      <xs:enumeration value="EAR" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OPCH.TIPOMOV" nillable="true" type="tns:OPCH.TIPOMOV" />
+  <xs:complexType name="ArrayOfOWTR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OWTR" nillable="true" type="tns:OWTR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOWTR" nillable="true" type="tns:ArrayOfOWTR" />
+  <xs:complexType name="OWTR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeAlmOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeAlmDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaArticulos" nillable="true" type="tns:ArrayOfWTR1" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Series" type="tns:OWTR.ISeries" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OWTR" nillable="true" type="tns:OWTR" />
+  <xs:complexType name="ArrayOfWTR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WTR1" nillable="true" type="tns:WTR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWTR1" nillable="true" type="tns:ArrayOfWTR1" />
+  <xs:complexType name="WTR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+      <xs:element minOccurs="0" name="CodeAlmOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeAlmDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WTR1" nillable="true" type="tns:WTR1" />
+  <xs:simpleType name="OWTR.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1100" />
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1300" />
+      <xs:enumeration value="S1500" />
+      <xs:enumeration value="S1600" />
+      <xs:enumeration value="S1700" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OWTR.ISeries" nillable="true" type="tns:OWTR.ISeries" />
+  <xs:complexType name="ArrayOfOPDN">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OPDN" nillable="true" type="tns:OPDN" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOPDN" nillable="true" type="tns:ArrayOfOPDN" />
+  <xs:complexType name="OPDN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName_x0020_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaxDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaDetalle" nillable="true" type="tns:ArrayOfPDN1" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Series" type="tns:OPDN.ISeries" />
+      <xs:element minOccurs="0" name="TipoMovimiento" type="tns:OPDN.TIPOMOV" />
+      <xs:element minOccurs="0" name="DocCurrency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SlpCode" type="xs:int" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OPDN" nillable="true" type="tns:OPDN" />
+  <xs:complexType name="ArrayOfPDN1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PDN1" nillable="true" type="tns:PDN1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPDN1" nillable="true" type="tns:ArrayOfPDN1" />
+  <xs:complexType name="PDN1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DiscountPercent" type="xs:double" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PDN1" nillable="true" type="tns:PDN1" />
+  <xs:simpleType name="OPDN.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1100" />
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1300" />
+      <xs:enumeration value="S1500" />
+      <xs:enumeration value="S1600" />
+      <xs:enumeration value="S1700" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OPDN.ISeries" nillable="true" type="tns:OPDN.ISeries" />
+  <xs:simpleType name="OPDN.TIPOMOV">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="COM" />
+      <xs:enumeration value="DEG" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OPDN.TIPOMOV" nillable="true" type="tns:OPDN.TIPOMOV" />
+  <xs:complexType name="ArrayOfOWOR">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OWOR" nillable="true" type="tns:OWOR" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOWOR" nillable="true" type="tns:ArrayOfOWOR" />
+  <xs:complexType name="OWOR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PostingDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DueDate_x0020_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlannedQty" type="xs:double" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListWOR1" nillable="true" type="tns:ArrayOfWOR1" />
+      <xs:element minOccurs="0" name="DocDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDueDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Series" type="tns:OWOR.ISeries" />
+      <xs:element minOccurs="0" name="Series2" type="tns:OWOR.ISeries2" />
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno2" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OWOR" nillable="true" type="tns:OWOR" />
+  <xs:complexType name="ArrayOfWOR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WOR1" nillable="true" type="tns:WOR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWOR1" nillable="true" type="tns:ArrayOfWOR1" />
+  <xs:complexType name="WOR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity_x0020_" type="xs:double" />
+      <xs:element minOccurs="0" name="Warehouse" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlannedQty" type="xs:double" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WOR1" nillable="true" type="tns:WOR1" />
+  <xs:simpleType name="OWOR.ISeries">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OWOR.ISeries" nillable="true" type="tns:OWOR.ISeries" />
+  <xs:simpleType name="OWOR.ISeries2">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="S1200" />
+      <xs:enumeration value="S1500" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OWOR.ISeries2" nillable="true" type="tns:OWOR.ISeries2" />
+  <xs:complexType name="ArrayOfORPD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ORPD" nillable="true" type="tns:ORPD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfORPD" nillable="true" type="tns:ArrayOfORPD" />
+  <xs:complexType name="ORPD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAtCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesPersonCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaDetalle" nillable="true" type="tns:ArrayOfPDN1" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="Jrnlmemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORPD" nillable="true" type="tns:ORPD" />
+  <xs:complexType name="ArrayOfOCRD">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OCRD" nillable="true" type="tns:OCRD" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOCRD" nillable="true" type="tns:ArrayOfOCRD" />
+  <xs:complexType name="OCRD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoM" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ApellidoP" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="E_Mail" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LicTradNum" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCRD1" nillable="true" type="tns:ArrayOfCRD1" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="MailCity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCountr" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MailCounty" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Notes" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipDoc" type="xs:int" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TipoPersona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="U_GS_EsExt" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OCRD" nillable="true" type="tns:OCRD" />
+  <xs:complexType name="ArrayOfCRD1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="CRD1" nillable="true" type="tns:CRD1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCRD1" nillable="true" type="tns:ArrayOfCRD1" />
+  <xs:complexType name="CRD1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Block" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BuildingFloorRoom" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="County" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetNo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CRD1" nillable="true" type="tns:CRD1" />
+  <xs:complexType name="ArrayOfOSLP">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OSLP" nillable="true" type="tns:OSLP" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOSLP" nillable="true" type="tns:ArrayOfOSLP" />
+  <xs:complexType name="OSLP">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CodeEmployee" type="xs:int" />
+      <xs:element minOccurs="0" name="SlpNAme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeAlm" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstCampoUsuario" nillable="true" type="tns:ArrayOfCampoUsuario" />
+      <xs:element minOccurs="0" name="JrnlMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodigoExterno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OSLP" nillable="true" type="tns:OSLP" />
+</xs:schema>

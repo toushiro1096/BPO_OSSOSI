@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SSC.Entity" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SSC.Entity" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="OPRQ">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="JournalMemo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LstPRQ1" nillable="true" type="tns:ArrayOfPRQ1" />
+      <xs:element minOccurs="0" name="RequriedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TaxDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OPRQ" nillable="true" type="tns:OPRQ" />
+  <xs:complexType name="ArrayOfPRQ1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PRQ1" nillable="true" type="tns:PRQ1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPRQ1" nillable="true" type="tns:ArrayOfPRQ1" />
+  <xs:complexType name="PRQ1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CostingCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="RequiredDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PRQ1" nillable="true" type="tns:PRQ1" />
+  <xs:complexType name="OWTR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DocDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CodeAlmOrigen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CodeAlmDestino" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="memo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaArticulos" nillable="true" type="tns:ArrayOfWTR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OWTR" nillable="true" type="tns:OWTR" />
+  <xs:complexType name="ArrayOfWTR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WTR1" nillable="true" type="tns:WTR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWTR1" nillable="true" type="tns:ArrayOfWTR1" />
+  <xs:complexType name="WTR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="StyleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:decimal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WTR1" nillable="true" type="tns:WTR1" />
+  <xs:complexType name="ORDR">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName_x0020_" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate_x0020_" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocTotal_x0020_" type="xs:double" />
+      <xs:element minOccurs="0" name="LstDetalle" nillable="true" type="tns:ArrayOfRDR1" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesPersonCode" type="xs:int" />
+      <xs:element minOccurs="0" name="TipoDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerieDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumDoc" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EfectivoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="EfectivoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="EntregadoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="EntregadoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="VueltoSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="VueltoDolares" type="xs:double" />
+      <xs:element minOccurs="0" name="MonedaVuelto" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TarjetaSoles" type="xs:double" />
+      <xs:element minOccurs="0" name="TarjetaDolares" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORDR" nillable="true" type="tns:ORDR" />
+  <xs:complexType name="ArrayOfRDR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RDR1" nillable="true" type="tns:RDR1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRDR1" nillable="true" type="tns:ArrayOfRDR1" />
+  <xs:complexType name="RDR1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DiscountPercent" type="xs:double" />
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ItemDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="WarehouseCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RDR1" nillable="true" type="tns:RDR1" />
+  <xs:complexType name="OPDN">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAtCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesPersonCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaDetalle" nillable="true" type="tns:ArrayOfPDN1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OPDN" nillable="true" type="tns:OPDN" />
+  <xs:complexType name="ArrayOfPDN1">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PDN1" nillable="true" type="tns:PDN1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPDN1" nillable="true" type="tns:ArrayOfPDN1" />
+  <xs:complexType name="PDN1">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ItemCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Quantity" type="xs:double" />
+      <xs:element minOccurs="0" name="TaxCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PDN1" nillable="true" type="tns:PDN1" />
+  <xs:complexType name="ORPD">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CardCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CardName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumAtCard" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DocDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DocDueDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="SalesPersonCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaDetalle" nillable="true" type="tns:ArrayOfPDN1" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ORPD" nillable="true" type="tns:ORPD" />
+</xs:schema>

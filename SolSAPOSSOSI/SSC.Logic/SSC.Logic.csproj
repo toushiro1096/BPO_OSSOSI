@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C47A22E-7080-4FB4-8C83-E1430A70E81E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSC.Logic</RootNamespace>
+    <AssemblyName>SSC.Logic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BITM1.cs" />
+    <Compile Include="BITT1.cs" />
+    <Compile Include="BOCRD.cs" />
+    <Compile Include="BOITM.cs" />
+    <Compile Include="BOITT.cs" />
+    <Compile Include="BOPLN.cs" />
+    <Compile Include="BOPOR.cs" />
+    <Compile Include="BORTT.cs" />
+    <Compile Include="BOSLP.cs" />
+    <Compile Include="BOWHS.cs" />
+    <Compile Include="BPOR1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SSC.Entity\SSC.Entity.csproj">
+      <Project>{0a41a623-0d60-4f72-9c04-61c7754eb621}</Project>
+      <Name>SSC.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSC.ILogic\SSC.ILogic.csproj">
+      <Project>{2bf9ac4d-2147-4d23-814c-cef682fbc4a1}</Project>
+      <Name>SSC.ILogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSC.Interface\SSC.Interface.csproj">
+      <Project>{308740ca-1b92-4b75-bfde-ac5d153d740f}</Project>
+      <Name>SSC.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SSC.SQLDataLAyer\SSC.SQLDataLAyer.csproj">
+      <Project>{b070059c-7ca6-4183-a3ce-f00e56e1fb7c}</Project>
+      <Name>SSC.SQLDataLAyer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

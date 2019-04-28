@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceC" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:53141/Services/ServiceC.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:53141/Services/ServiceC.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:53141/Services/ServiceC.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IOCRD_FP_BUSCAR_OCRD_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_BUSCAR_OCRD" />
+  </wsdl:message>
+  <wsdl:message name="IOCRD_FP_BUSCAR_OCRD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_BUSCAR_OCRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOCRD_FP_Listar_OCRD_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Listar_OCRD" />
+  </wsdl:message>
+  <wsdl:message name="IOCRD_FP_Listar_OCRD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Listar_OCRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOITM_FP_LISTAR_OITM_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_OITM" />
+  </wsdl:message>
+  <wsdl:message name="IOITM_FP_LISTAR_OITM_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_OITMResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOITM_FP_LISTAR_OITM_TOT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_OITM_TOT" />
+  </wsdl:message>
+  <wsdl:message name="IOITM_FP_LISTAR_OITM_TOT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_OITM_TOTResponse" />
+  </wsdl:message>
+  <wsdl:message name="IORTT_FP_LISTAR_ORTT_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_ORTT" />
+  </wsdl:message>
+  <wsdl:message name="IORTT_FP_LISTAR_ORTT_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_LISTAR_ORTTResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IOCRD">
+    <wsdl:operation name="FP_BUSCAR_OCRD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOCRD/FP_BUSCAR_OCRD" message="tns:IOCRD_FP_BUSCAR_OCRD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOCRD/FP_BUSCAR_OCRDResponse" message="tns:IOCRD_FP_BUSCAR_OCRD_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Listar_OCRD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOCRD/FP_Listar_OCRD" message="tns:IOCRD_FP_Listar_OCRD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOCRD/FP_Listar_OCRDResponse" message="tns:IOCRD_FP_Listar_OCRD_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IOITM">
+    <wsdl:operation name="FP_LISTAR_OITM">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOITM/FP_LISTAR_OITM" message="tns:IOITM_FP_LISTAR_OITM_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOITM/FP_LISTAR_OITMResponse" message="tns:IOITM_FP_LISTAR_OITM_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_LISTAR_OITM_TOT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOITM/FP_LISTAR_OITM_TOT" message="tns:IOITM_FP_LISTAR_OITM_TOT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOITM/FP_LISTAR_OITM_TOTResponse" message="tns:IOITM_FP_LISTAR_OITM_TOT_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IORTT">
+    <wsdl:operation name="FP_LISTAR_ORTT">
+      <wsdl:input wsaw:Action="http://tempuri.org/IORTT/FP_LISTAR_ORTT" message="tns:IORTT_FP_LISTAR_ORTT_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IORTT/FP_LISTAR_ORTTResponse" message="tns:IORTT_FP_LISTAR_ORTT_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IOCRD" type="tns:IOCRD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_BUSCAR_OCRD">
+      <soap:operation soapAction="http://tempuri.org/IOCRD/FP_BUSCAR_OCRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Listar_OCRD">
+      <soap:operation soapAction="http://tempuri.org/IOCRD/FP_Listar_OCRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IOITM" type="tns:IOITM">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_LISTAR_OITM">
+      <soap:operation soapAction="http://tempuri.org/IOITM/FP_LISTAR_OITM" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_LISTAR_OITM_TOT">
+      <soap:operation soapAction="http://tempuri.org/IOITM/FP_LISTAR_OITM_TOT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IORTT" type="tns:IORTT">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_LISTAR_ORTT">
+      <soap:operation soapAction="http://tempuri.org/IORTT/FP_LISTAR_ORTT" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceC">
+    <wsdl:port name="BasicHttpBinding_IOCRD" binding="tns:BasicHttpBinding_IOCRD">
+      <soap:address location="http://localhost:53141/Services/ServiceC.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IOITM" binding="tns:BasicHttpBinding_IOITM">
+      <soap:address location="http://localhost:53141/Services/ServiceC.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IORTT" binding="tns:BasicHttpBinding_IORTT">
+      <soap:address location="http://localhost:53141/Services/ServiceC.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:53190/ServiceIC.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+  <xs:element name="FP_Solicitud_OPOR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjOPRQ" nillable="true" type="q1:OPRQ" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_OPORResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FP_Solicitud_OPORResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Traslado_OWTR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjOWTR" nillable="true" type="q2:OWTR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Traslado_OWTRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FP_Solicitud_Traslado_OWTRResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Venta_ORDR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjORDR" nillable="true" type="q3:ORDR" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Venta_ORDRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FP_Solicitud_Venta_ORDRResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Recibo_OPDN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjOPDN" nillable="true" type="q4:OPDN" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Recibo_OPDNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FP_Solicitud_Recibo_OPDNResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Devolucion_Recibo_ORPD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="ObjORPD" nillable="true" type="q5:ORPD" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Devolucion_Recibo_ORPDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FP_Devolucion_Recibo_ORPDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

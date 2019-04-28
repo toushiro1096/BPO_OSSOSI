@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceI" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+      <xsd:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="Iconfig_RefreshMemory_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMemory" />
+  </wsdl:message>
+  <wsdl:message name="Iconfig_RefreshMemory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshMemoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_CancelarDocumentos_ORDR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_CancelarDocumentos_ORDR" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_CancelarDocumentos_ORDR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_CancelarDocumentos_ORDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_Venta_Masiva_ORDR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Venta_Masiva_ORDR" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_Venta_Masiva_ORDR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Venta_Masiva_ORDRResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_NotaCredito_Compra_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_NotaCredito_Compra" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_NotaCredito_Compra_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_NotaCredito_CompraResponse" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_NotaCredito_Venta_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_NotaCredito_Venta" />
+  </wsdl:message>
+  <wsdl:message name="SORDR_FP_Solicitud_NotaCredito_Venta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_NotaCredito_VentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Solicitud_OPOR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_OPOR" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Solicitud_OPOR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_OPORResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Orden_Compra_OPOR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Orden_Compra_OPOR" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Orden_Compra_OPOR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Orden_Compra_OPORResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Pedido_Proovedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Pedido_Proovedores" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_Pedido_Proovedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Pedido_ProovedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_EntradaMercancia_To_Proovedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_EntradaMercancia_To_Proovedores" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_EntradaMercancia_To_Proovedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_EntradaMercancia_To_ProovedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_OrdenCompra_To_EntradaMercancia_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_OrdenCompra_To_EntradaMercancia" />
+  </wsdl:message>
+  <wsdl:message name="SOPOR_FP_OrdenCompra_To_EntradaMercancia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_OrdenCompra_To_EntradaMercanciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOWTR_FP_Transferencia_Stock_OWTR_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Transferencia_Stock_OWTR" />
+  </wsdl:message>
+  <wsdl:message name="IOWTR_FP_Transferencia_Stock_OWTR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Transferencia_Stock_OWTRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Recibo_OPDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Recibo_OPDN" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Recibo_OPDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Recibo_OPDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Salida_OPDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Salida_OPDN" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Salida_OPDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Salida_OPDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Ajuste_Salida_OPDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Ajuste_Salida_OPDN" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Ajuste_Salida_OPDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Ajuste_Salida_OPDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Ajuste_Ingreso_OPDN_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Ajuste_Ingreso_OPDN" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Ajuste_Ingreso_OPDN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Ajuste_Ingreso_OPDNResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Transformacion_Ingreso_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Transformacion_Ingreso" />
+  </wsdl:message>
+  <wsdl:message name="IOPDN_FP_Solicitud_Transformacion_Ingreso_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Solicitud_Transformacion_IngresoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IORPD_FP_Devolucion_Recibo_ORPD_InputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Devolucion_Recibo_ORPD" />
+  </wsdl:message>
+  <wsdl:message name="IORPD_FP_Devolucion_Recibo_ORPD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FP_Devolucion_Recibo_ORPDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOCRD_SP_INSERTAR_OCRD_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OCRD" />
+  </wsdl:message>
+  <wsdl:message name="SOCRD_SP_INSERTAR_OCRD_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OCRDResponse" />
+  </wsdl:message>
+  <wsdl:message name="SOSLP_SP_INSERTAR_OSLP_InputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OSLP" />
+  </wsdl:message>
+  <wsdl:message name="SOSLP_SP_INSERTAR_OSLP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SP_INSERTAR_OSLPResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Iconfig">
+    <wsdl:operation name="RefreshMemory">
+      <wsdl:input wsaw:Action="http://tempuri.org/Iconfig/RefreshMemory" message="tns:Iconfig_RefreshMemory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/Iconfig/RefreshMemoryResponse" message="tns:Iconfig_RefreshMemory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SORDR">
+    <wsdl:operation name="FP_Solicitud_CancelarDocumentos_ORDR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_CancelarDocumentos_ORDR" message="tns:SORDR_FP_Solicitud_CancelarDocumentos_ORDR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_CancelarDocumentos_ORDRResponse" message="tns:SORDR_FP_Solicitud_CancelarDocumentos_ORDR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Venta_Masiva_ORDR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDR" message="tns:SORDR_FP_Solicitud_Venta_Masiva_ORDR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDRResponse" message="tns:SORDR_FP_Solicitud_Venta_Masiva_ORDR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_NotaCredito_Compra">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_Compra" message="tns:SORDR_FP_Solicitud_NotaCredito_Compra_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_CompraResponse" message="tns:SORDR_FP_Solicitud_NotaCredito_Compra_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_NotaCredito_Venta">
+      <wsdl:input wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_Venta" message="tns:SORDR_FP_Solicitud_NotaCredito_Venta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_VentaResponse" message="tns:SORDR_FP_Solicitud_NotaCredito_Venta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOPOR">
+    <wsdl:operation name="FP_Solicitud_OPOR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_Solicitud_OPOR" message="tns:SOPOR_FP_Solicitud_OPOR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_Solicitud_OPORResponse" message="tns:SOPOR_FP_Solicitud_OPOR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Orden_Compra_OPOR">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_Orden_Compra_OPOR" message="tns:SOPOR_FP_Orden_Compra_OPOR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_Orden_Compra_OPORResponse" message="tns:SOPOR_FP_Orden_Compra_OPOR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Pedido_Proovedores">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_Pedido_Proovedores" message="tns:SOPOR_FP_Pedido_Proovedores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_Pedido_ProovedoresResponse" message="tns:SOPOR_FP_Pedido_Proovedores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_EntradaMercancia_To_Proovedores">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_EntradaMercancia_To_Proovedores" message="tns:SOPOR_FP_EntradaMercancia_To_Proovedores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_EntradaMercancia_To_ProovedoresResponse" message="tns:SOPOR_FP_EntradaMercancia_To_Proovedores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_OrdenCompra_To_EntradaMercancia">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOPOR/FP_OrdenCompra_To_EntradaMercancia" message="tns:SOPOR_FP_OrdenCompra_To_EntradaMercancia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOPOR/FP_OrdenCompra_To_EntradaMercanciaResponse" message="tns:SOPOR_FP_OrdenCompra_To_EntradaMercancia_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IOWTR">
+    <wsdl:operation name="FP_Transferencia_Stock_OWTR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOWTR/FP_Transferencia_Stock_OWTR" message="tns:IOWTR_FP_Transferencia_Stock_OWTR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOWTR/FP_Transferencia_Stock_OWTRResponse" message="tns:IOWTR_FP_Transferencia_Stock_OWTR_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IOPDN">
+    <wsdl:operation name="FP_Solicitud_Recibo_OPDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Recibo_OPDN" message="tns:IOPDN_FP_Solicitud_Recibo_OPDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Recibo_OPDNResponse" message="tns:IOPDN_FP_Solicitud_Recibo_OPDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Salida_OPDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Salida_OPDN" message="tns:IOPDN_FP_Solicitud_Salida_OPDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Salida_OPDNResponse" message="tns:IOPDN_FP_Solicitud_Salida_OPDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Ajuste_Salida_OPDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Salida_OPDN" message="tns:IOPDN_FP_Solicitud_Ajuste_Salida_OPDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Salida_OPDNResponse" message="tns:IOPDN_FP_Solicitud_Ajuste_Salida_OPDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Ajuste_Ingreso_OPDN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Ingreso_OPDN" message="tns:IOPDN_FP_Solicitud_Ajuste_Ingreso_OPDN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Ingreso_OPDNResponse" message="tns:IOPDN_FP_Solicitud_Ajuste_Ingreso_OPDN_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Transformacion_Ingreso">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Transformacion_Ingreso" message="tns:IOPDN_FP_Solicitud_Transformacion_Ingreso_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOPDN/FP_Solicitud_Transformacion_IngresoResponse" message="tns:IOPDN_FP_Solicitud_Transformacion_Ingreso_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IORPD">
+    <wsdl:operation name="FP_Devolucion_Recibo_ORPD">
+      <wsdl:input wsaw:Action="http://tempuri.org/IORPD/FP_Devolucion_Recibo_ORPD" message="tns:IORPD_FP_Devolucion_Recibo_ORPD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IORPD/FP_Devolucion_Recibo_ORPDResponse" message="tns:IORPD_FP_Devolucion_Recibo_ORPD_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOCRD">
+    <wsdl:operation name="SP_INSERTAR_OCRD">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOCRD/SP_INSERTAR_OCRD" message="tns:SOCRD_SP_INSERTAR_OCRD_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOCRD/SP_INSERTAR_OCRDResponse" message="tns:SOCRD_SP_INSERTAR_OCRD_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SOSLP">
+    <wsdl:operation name="SP_INSERTAR_OSLP">
+      <wsdl:input wsaw:Action="http://tempuri.org/SOSLP/SP_INSERTAR_OSLP" message="tns:SOSLP_SP_INSERTAR_OSLP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/SOSLP/SP_INSERTAR_OSLPResponse" message="tns:SOSLP_SP_INSERTAR_OSLP_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_Iconfig" type="tns:Iconfig">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RefreshMemory">
+      <soap:operation soapAction="http://tempuri.org/Iconfig/RefreshMemory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SORDR" type="tns:SORDR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Solicitud_CancelarDocumentos_ORDR">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Solicitud_CancelarDocumentos_ORDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Venta_Masiva_ORDR">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Solicitud_Venta_Masiva_ORDR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_NotaCredito_Compra">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_Compra" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_NotaCredito_Venta">
+      <soap:operation soapAction="http://tempuri.org/SORDR/FP_Solicitud_NotaCredito_Venta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOPOR" type="tns:SOPOR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Solicitud_OPOR">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_Solicitud_OPOR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Orden_Compra_OPOR">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_Orden_Compra_OPOR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Pedido_Proovedores">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_Pedido_Proovedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_EntradaMercancia_To_Proovedores">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_EntradaMercancia_To_Proovedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_OrdenCompra_To_EntradaMercancia">
+      <soap:operation soapAction="http://tempuri.org/SOPOR/FP_OrdenCompra_To_EntradaMercancia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IOWTR" type="tns:IOWTR">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Transferencia_Stock_OWTR">
+      <soap:operation soapAction="http://tempuri.org/IOWTR/FP_Transferencia_Stock_OWTR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IOPDN" type="tns:IOPDN">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Solicitud_Recibo_OPDN">
+      <soap:operation soapAction="http://tempuri.org/IOPDN/FP_Solicitud_Recibo_OPDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Salida_OPDN">
+      <soap:operation soapAction="http://tempuri.org/IOPDN/FP_Solicitud_Salida_OPDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Ajuste_Salida_OPDN">
+      <soap:operation soapAction="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Salida_OPDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Ajuste_Ingreso_OPDN">
+      <soap:operation soapAction="http://tempuri.org/IOPDN/FP_Solicitud_Ajuste_Ingreso_OPDN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FP_Solicitud_Transformacion_Ingreso">
+      <soap:operation soapAction="http://tempuri.org/IOPDN/FP_Solicitud_Transformacion_Ingreso" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_IORPD" type="tns:IORPD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FP_Devolucion_Recibo_ORPD">
+      <soap:operation soapAction="http://tempuri.org/IORPD/FP_Devolucion_Recibo_ORPD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOCRD" type="tns:SOCRD">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SP_INSERTAR_OCRD">
+      <soap:operation soapAction="http://tempuri.org/SOCRD/SP_INSERTAR_OCRD" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BasicHttpBinding_SOSLP" type="tns:SOSLP">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SP_INSERTAR_OSLP">
+      <soap:operation soapAction="http://tempuri.org/SOSLP/SP_INSERTAR_OSLP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceI">
+    <wsdl:port name="BasicHttpBinding_Iconfig" binding="tns:BasicHttpBinding_Iconfig">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SORDR" binding="tns:BasicHttpBinding_SORDR">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOPOR" binding="tns:BasicHttpBinding_SOPOR">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IOWTR" binding="tns:BasicHttpBinding_IOWTR">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IOPDN" binding="tns:BasicHttpBinding_IOPDN">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_IORPD" binding="tns:BasicHttpBinding_IORPD">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOCRD" binding="tns:BasicHttpBinding_SOCRD">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+    <wsdl:port name="BasicHttpBinding_SOSLP" binding="tns:BasicHttpBinding_SOSLP">
+      <soap:address location="http://169.47.196.210:9091/Services/ServiceI.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

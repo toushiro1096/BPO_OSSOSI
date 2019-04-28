@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://169.47.196.210:9091/Services/ServiceI.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SSC.Entity" />
+  <xs:element name="RefreshMemory">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshMemoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_CancelarDocumentos_ORDR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstORDR" nillable="true" type="q1:ArrayOfORDR" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_CancelarDocumentos_ORDRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_CancelarDocumentos_ORDRResult" nillable="true" type="q2:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Venta_Masiva_ORDR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstORDR" nillable="true" type="q3:ArrayOfORDR" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Venta_Masiva_ORDRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Venta_Masiva_ORDRResult" nillable="true" type="q4:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_NotaCredito_Compra">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstORPC" nillable="true" type="q5:ArrayOfORPC" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_NotaCredito_CompraResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_NotaCredito_CompraResult" nillable="true" type="q6:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_NotaCredito_Venta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstORPC" nillable="true" type="q7:ArrayOfORPC" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_NotaCredito_VentaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_NotaCredito_VentaResult" nillable="true" type="q8:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_OPOR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPRQ" nillable="true" type="q9:ArrayOfOPRQ" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_OPORResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_OPORResult" nillable="true" type="q10:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Orden_Compra_OPOR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPRQ" nillable="true" type="q11:ArrayOfOPRQ" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Orden_Compra_OPORResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Orden_Compra_OPORResult" nillable="true" type="q12:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Pedido_Proovedores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPCH" nillable="true" type="q13:ArrayOfOPCH" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Pedido_ProovedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Pedido_ProovedoresResult" nillable="true" type="q14:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_EntradaMercancia_To_Proovedores">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPCH" nillable="true" type="q15:ArrayOfOPCH" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_EntradaMercancia_To_ProovedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_EntradaMercancia_To_ProovedoresResult" nillable="true" type="q16:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_OrdenCompra_To_EntradaMercancia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPRQ" nillable="true" type="q17:ArrayOfOPRQ" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_OrdenCompra_To_EntradaMercanciaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_OrdenCompra_To_EntradaMercanciaResult" nillable="true" type="q18:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Transferencia_Stock_OWTR">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOWTR" nillable="true" type="q19:ArrayOfOWTR" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Transferencia_Stock_OWTRResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Transferencia_Stock_OWTRResult" nillable="true" type="q20:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Recibo_OPDN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPDN" nillable="true" type="q21:ArrayOfOPDN" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Recibo_OPDNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Recibo_OPDNResult" nillable="true" type="q22:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Salida_OPDN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPDN" nillable="true" type="q23:ArrayOfOPDN" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Salida_OPDNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Salida_OPDNResult" nillable="true" type="q24:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Ajuste_Salida_OPDN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPDN" nillable="true" type="q25:ArrayOfOPDN" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Ajuste_Salida_OPDNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Ajuste_Salida_OPDNResult" nillable="true" type="q26:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Ajuste_Ingreso_OPDN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOPDN" nillable="true" type="q27:ArrayOfOPDN" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Ajuste_Ingreso_OPDNResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Ajuste_Ingreso_OPDNResult" nillable="true" type="q28:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Transformacion_Ingreso">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOWOR" nillable="true" type="q29:ArrayOfOWOR" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Solicitud_Transformacion_IngresoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Solicitud_Transformacion_IngresoResult" nillable="true" type="q30:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Devolucion_Recibo_ORPD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstORPD" nillable="true" type="q31:ArrayOfORPD" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FP_Devolucion_Recibo_ORPDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="FP_Devolucion_Recibo_ORPDResult" nillable="true" type="q32:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SP_INSERTAR_OCRD">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOCRD" nillable="true" type="q33:ArrayOfOCRD" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SP_INSERTAR_OCRDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="SP_INSERTAR_OCRDResult" nillable="true" type="q34:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SP_INSERTAR_OSLP">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="LstOSLP" nillable="true" type="q35:ArrayOfOSLP" />
+        <xs:element minOccurs="0" name="Compania" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SP_INSERTAR_OSLPResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/SSC.Entity" minOccurs="0" name="SP_INSERTAR_OSLPResult" nillable="true" type="q36:ArrayOfCError" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
